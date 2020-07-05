@@ -15,20 +15,20 @@ public class Fuzzy_Theory {
 	// 온도 최소값
 	static double TEMP_MIN(double x ) {
 		if(x < 20) return 1;
-		else if(x >= 20 && x < 25) return (25 - x) / 20;
+		else if(x >= 20 && x < 25) return (25 - x) / 5;
 		else return 0;
 	}
 	
 	// 온도 중간값
 	static double TEMP_MID(double x) {
 		if(x > 20 && x<25) return (x - 20) / 5;
-		else if(x >= 25 && x <= 30) return (30 - x) / 20;
+		else if(x >= 25 && x <= 30) return (30 - x) / 5;
 		else return 0;
 	}
 	
 	// 온도 최대값
 	static double TEMP_MAX(double x) {
-		if (x > 25 && x < 30) return (x - 25) / 20;
+		if (x > 25 && x < 30) return (x - 25) / 5;
 		else if (x >= 30) return 1;
 		else return 0;
 	}
@@ -64,7 +64,7 @@ public class Fuzzy_Theory {
 	
 	// 학생 수 중간값
 	static double STD_MID(double x) {
-		if(x > 10 && x<20) return (x - 10) / 5;
+		if(x > 10 && x<20) return (x - 10) / 10;
 		else if(x >= 20 && x <= 30) return (30 - x) / 10;
 		else return 0;
 	}
